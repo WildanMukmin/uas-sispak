@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pakar Diagnosis Penyakit Lambung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h1 class="text-3xl font-bold text-indigo-900 text-center mb-2">
+            Sistem Pakar Diagnosis Penyakit Lambung
+          </h1>
+          <p class="text-gray-600 text-center">
+            Pilih gejala yang Anda alami untuk mendapatkan diagnosis
+          </p>
+        </div>
+
+        <!-- Form Gejala -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            Daftar Gejala
+          </h2>
+          <form id="diagnosisForm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Ga"
+                  name="gejala[]"
+                  value="Ga"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Ga" class="text-gray-700 cursor-pointer"
+                  >Nyeri pada Ulu Hati</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gb"
+                  name="gejala[]"
+                  value="Gb"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gb" class="text-gray-700 cursor-pointer"
+                  >Mual/Muntah</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gc"
+                  name="gejala[]"
+                  value="Gc"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gc" class="text-gray-700 cursor-pointer"
+                  >Panas di Dada</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gd"
+                  name="gejala[]"
+                  value="Gd"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gd" class="text-gray-700 cursor-pointer"
+                  >Perut Kembung Sering Sendawa</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Ge"
+                  name="gejala[]"
+                  value="Ge"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Ge" class="text-gray-700 cursor-pointer"
+                  >Cepat Kenyang Saat Makan</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gf"
+                  name="gejala[]"
+                  value="Gf"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gf" class="text-gray-700 cursor-pointer"
+                  >Asam Lambung Naik</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gg"
+                  name="gejala[]"
+                  value="Gg"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gg" class="text-gray-700 cursor-pointer"
+                  >Anemia/Kurang Darah</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gh"
+                  name="gejala[]"
+                  value="Gh"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gh" class="text-gray-700 cursor-pointer"
+                  >Muntah Darah</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gi"
+                  name="gejala[]"
+                  value="Gi"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gi" class="text-gray-700 cursor-pointer"
+                  >Sakit Kuning</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gj"
+                  name="gejala[]"
+                  value="Gj"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gj" class="text-gray-700 cursor-pointer"
+                  >Penurunan Berat Badan</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gk"
+                  name="gejala[]"
+                  value="Gk"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gk" class="text-gray-700 cursor-pointer"
+                  >Warna Kotoran Berubah Hitam</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gl"
+                  name="gejala[]"
+                  value="Gl"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gl" class="text-gray-700 cursor-pointer"
+                  >Perasaan Penuh pada Perut Bagian Atas</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gm"
+                  name="gejala[]"
+                  value="Gm"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gm" class="text-gray-700 cursor-pointer"
+                  >Berkurangnya Nafsu Makan</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Gn"
+                  name="gejala[]"
+                  value="Gn"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Gn" class="text-gray-700 cursor-pointer"
+                  >Kesulitan Bernafas</label
+                >
+              </div>
+              <div class="flex items-start">
+                <input
+                  type="checkbox"
+                  id="Go"
+                  name="gejala[]"
+                  value="Go"
+                  class="mt-1 mr-3 h-5 w-5 text-indigo-600"
+                />
+                <label for="Go" class="text-gray-700 cursor-pointer"
+                  >Nyeri Perut Bagian Atas</label
+                >
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-4">
+              <button
+                type="submit"
+                class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+              >
+                Diagnosa
+              </button>
+              <button
+                type="button"
+                onclick="resetForm()"
+                class="flex-1 bg-gray-500 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-200"
+              >
+                Reset
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Hasil Diagnosis -->
+        <div
+          id="resultSection"
+          class="hidden bg-white rounded-lg shadow-lg p-6"
+        >
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">
+            Hasil Diagnosis
+          </h2>
+          <div id="resultContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Knowledge Base
+      const penyakit = [
+        {
+          kode: "P01",
+          nama: "GERD",
+          gejala: ["Ga", "Gb", "Gc"],
+          total: 3,
+          solusi:
+            "Minum susu, konsumsi jahe, makan dalam porsi kecil secara perlahan, jangan tidur setelah makan, angkat kepala saat tidur, berhentilah merokok.",
+        },
+        {
+          kode: "P02",
+          nama: "Gastric Cancer",
+          gejala: ["Gd", "Ga", "Ge", "Gb", "Gf"],
+          total: 5,
+          solusi:
+            "Berhenti merokok, lakukan kemoterapi, lakukan radioterapi, berolahraga secara teratur, hindari makanan yang memicu kanker, konsumsi makanan yang kaya serat",
+        },
+        {
+          kode: "P03",
+          nama: "Advanced Cancer",
+          gejala: ["Gg", "Gh", "Gi", "Gj", "Go"],
+          total: 5,
+          solusi:
+            "Lakukan kemoterapi, lakukan radioterapi, konsumsi makanan tinggi serat, berolahraga secara teratur, minimal 30 menit per hari, hindari makanan yang memicu kanker, hentikan merokok dan minum alkohol, dan untuk lebih pasti, disarankan untuk melakukan pemeriksaan langsung oleh dokter.",
+        },
+        {
+          kode: "P04",
+          nama: "Acute Ulcer",
+          gejala: ["Gb", "Gn", "Gj", "Gk", "Gd", "Ga"],
+          total: 6,
+          solusi:
+            "Gunakan obat-obatan untuk mengurangi dan menghambat produksi asam lambung, misalnya obat famotidine (Pepcid) dan cimetidine (Tagamet), batasi atau hindari konsumsi kafein, hindari makanan pedas, goreng, dan asam, kurangi stres, makan dalam porsi kecil tetapi sering, hindari obat-obatan yang dapat mengiritasi lapisan lambung, seperti NSAIDs atau aspirin.",
+        },
+        {
+          kode: "P05",
+          nama: "Chronic Ulcer",
+          gejala: ["Gl", "Gm", "Gb", "Gd", "Ga", "Gk", "Gj"],
+          total: 7,
+          solusi:
+            "Tidur secara teratur, hindari makanan pedas, berlemak, dan asam, makan secara teratur, tidur secara teratur, jangan terlalu banyak berpikir, hindari kopi, teh, dan alkohol, lakukan detoksifikasi secara teratur 1 hari setiap minggu, lakukan terapi relaksasi untuk menghindari stres, konsumsi obat-obatan yang mengandung antagonis H2 seperti ranitidine, famotidine, dan cimetidine.",
+        },
+      ];
+
+      const gejalaLabels = {
+        Ga: "Nyeri pada Ulu Hati",
+        Gb: "Mual/Muntah",
+        Gc: "Panas di Dada",
+        Gd: "Perut Kembung Sering Sendawa",
+        Ge: "Cepat Kenyang Saat Makan",
+        Gf: "Asam Lambung Naik",
+        Gg: "Anemia/Kurang Darah",
+        Gh: "Muntah Darah",
+        Gi: "Sakit Kuning",
+        Gj: "Penurunan Berat Badan",
+        Gk: "Warna Kotoran Berubah Hitam",
+        Gl: "Perasaan Penuh pada Perut Bagian Atas",
+        Gm: "Berkurangnya Nafsu Makan",
+        Gn: "Kesulitan Bernafas",
+        Go: "Nyeri Perut Bagian Atas",
+      };
+
+      document
+        .getElementById("diagnosisForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const checkedGejala = Array.from(
+            document.querySelectorAll('input[name="gejala[]"]:checked')
+          ).map((cb) => cb.value);
+
+          if (checkedGejala.length === 0) {
+            alert("Silakan pilih minimal satu gejala!");
+            return;
+          }
+
+          const hasil = diagnosa(checkedGejala);
+          tampilkanHasil(hasil, checkedGejala);
+        });
+
+      function diagnosa(gejalaInput) {
+        let hasilDiagnosa = [];
+
+        penyakit.forEach((p) => {
+          const cocok = p.gejala.filter((g) => gejalaInput.includes(g)).length;
+          const persentase = (cocok / p.total) * 100;
+
+          if (cocok > 0) {
+            hasilDiagnosa.push({
+              kode: p.kode,
+              nama: p.nama,
+              cocok: cocok,
+              total: p.total,
+              persentase: persentase.toFixed(2),
+              solusi: p.solusi,
+              gejalaMatched: p.gejala.filter((g) => gejalaInput.includes(g)),
+            });
+          }
+        });
+
+        hasilDiagnosa.sort((a, b) => b.persentase - a.persentase);
+        return hasilDiagnosa;
+      }
+
+      function tampilkanHasil(hasil, gejalaInput) {
+        const resultSection = document.getElementById("resultSection");
+        const resultContent = document.getElementById("resultContent");
+
+        if (hasil.length === 0) {
+          resultContent.innerHTML = `
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                        <p class="text-yellow-700">Tidak ditemukan penyakit yang cocok dengan gejala yang dipilih.</p>
+                    </div>
+                `;
+        } else {
+          let html = `
+                    <div class="mb-4 bg-blue-50 border-l-4 border-blue-400 p-4">
+                        <h3 class="font-semibold text-blue-900 mb-2">Gejala yang Dipilih:</h3>
+                        <ul class="list-disc list-inside text-blue-800">
+                            ${gejalaInput
+                              .map((g) => `<li>${gejalaLabels[g]}</li>`)
+                              .join("")}
+                        </ul>
+                    </div>
+                `;
+
+          hasil.forEach((h, index) => {
+            const bgColor =
+              index === 0
+                ? "bg-green-50 border-green-400"
+                : "bg-gray-50 border-gray-300";
+            html += `
+                        <div class="mb-4 border-l-4 ${bgColor} p-4 rounded">
+                            ${
+                              index === 0
+                                ? '<div class="text-green-700 font-bold mb-2">🎯 Diagnosis Paling Cocok</div>'
+                                : ""
+                            }
+                            <h3 class="text-lg font-bold text-gray-800 mb-2">${
+                              h.nama
+                            } (${h.kode})</h3>
+                            <div class="mb-2">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Tingkat Kesesuaian</span>
+                                    <span class="text-sm font-medium text-gray-700">${
+                                      h.persentase
+                                    }%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: ${
+                                      h.persentase
+                                    }%"></div>
+                                </div>
+                                <p class="text-sm text-gray-600 mt-1">${
+                                  h.cocok
+                                } dari ${h.total} gejala cocok</p>
+                            </div>
+                            <div class="mt-3">
+                                <h4 class="font-semibold text-gray-700 mb-1">Gejala yang Cocok:</h4>
+                                <ul class="list-disc list-inside text-gray-600 text-sm">
+                                    ${h.gejalaMatched
+                                      .map((g) => `<li>${gejalaLabels[g]}</li>`)
+                                      .join("")}
+                                </ul>
+                            </div>
+                            <div class="mt-3 p-3 bg-white rounded">
+                                <h4 class="font-semibold text-gray-700 mb-1">Solusi & Saran:</h4>
+                                <p class="text-gray-600 text-sm">${h.solusi}</p>
+                            </div>
+                        </div>
+                    `;
+          });
+
+          html += `
+                    <div class="mt-4 bg-red-50 border-l-4 border-red-400 p-4">
+                        <p class="text-red-700 text-sm"><strong>Catatan:</strong> Hasil diagnosis ini bersifat sementara. Untuk diagnosis yang lebih akurat, silakan konsultasikan dengan dokter.</p>
+                    </div>
+                `;
+
+          resultContent.innerHTML = html;
+        }
+
+        resultSection.classList.remove("hidden");
+        resultSection.scrollIntoView({ behavior: "smooth" });
+      }
+
+      function resetForm() {
+        document.getElementById("diagnosisForm").reset();
+        document.getElementById("resultSection").classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
