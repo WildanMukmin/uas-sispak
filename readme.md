@@ -34,11 +34,11 @@ Sistem pakar berbasis web untuk mendiagnosis penyakit lambung menggunakan metode
 
 ## 🎬 Demo
 
-[Live Demo](#) _(Tambahkan link demo Anda di sini)_
+[Live Demo](https://wildanmukmin.github.io/uas-sispak/)
 
 ### Screenshot
 
-![Screenshot Aplikasi](screenshot.png) _(Tambahkan screenshot aplikasi Anda)_
+![Screenshot Aplikasi](thumbnail.jpeg)
 
 ## 🛠 Teknologi
 
